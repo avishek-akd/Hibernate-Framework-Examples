@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping>
+	<class name="com.avishek.hibernate.Student" table="student">
+	
+		<composite-id name="studentid" class="com.avishek.hibernate.SID">
+			<key-property name="bid" type="string" column="bid"/>
+			<key-property name="sid" type="string" column="sid"/>
+		</composite-id>
+		
+		<property name="sname"/>
+		<property name="email" />
+		<property name="mob" type="long" />
+		
+	</class>
+</hibernate-mapping>  

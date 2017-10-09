@@ -1,0 +1,8 @@
+create table customer(
+id int primary key,
+name varchar(15),
+email varchar(15),
+mob varchar(15),
+city varchar(15),
+bal double
+);

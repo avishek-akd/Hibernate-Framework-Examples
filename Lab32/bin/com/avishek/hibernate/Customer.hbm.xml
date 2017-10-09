@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping>
+	<class name="com.avishek.hibernate.Customer" table="customer">
+	
+		<id name="cid" column="cid" type="int">
+			<generator class="increment" />
+		</id>
+		
+		<property name="cname"/>
+		<property name="email" />
+		<property name="city" />
+		<property name="cardBal" type="double" />
+		<property name="cardType" />
+		<property name="cardNo"  type="int"/>
+		<property name="status" />
+		
+	</class>
+ 
+
+	
+		<sql-query name="AllCustomer1">
+				select * from customer
+		</sql-query>
+		
+		<query name="AllCustomer2">
+				from Customer
+		</query>
+		
+		<sql-query name="city_wise">
+				select * from customer where city=?
+		</sql-query>
+	
+</hibernate-mapping>  

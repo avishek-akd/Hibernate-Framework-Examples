@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping>
+	<class name="com.avishek.hibernate.Student" table="mystudent">
+	
+		<id name="sid" column="sid" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="sname" />
+		<property name="dob" />
+		<property name="quali"/>
+		
+		<array name="course" table="mycourse">
+			<key column="sid"/>
+			<index column="LearningOrder"/>
+			<element column="CourseName" type="string"/>
+		</array>
+		
+		<list name="emails" table="myemails">
+			<key column="sid"/>
+			<index column="Priority"/>
+			<element column="EmailId" type="string"/>
+		</list>
+		
+		<bag name="marks" table="mymarks">
+			<key column="sid"/>
+			
+			<element column="Marks" type="int"/>
+		</bag>
+		
+		<set name="phones" table="myphones">
+			<key column="sid"/>
+			
+			<element column="Phone" type="long"/>
+		</set>
+		
+		<map name="refs" table="myrefs">
+			<key column="sid"/>
+			<index column="rname" type="string"/>
+			<element column="refno" type="long"/>
+		</map>
+		
+		
+	</class>
+</hibernate-mapping>  

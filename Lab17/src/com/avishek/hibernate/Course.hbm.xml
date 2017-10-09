@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping>
+	<class name="com.avishek.hibernate.Course" table="course">
+	
+		<id name="cid" column="cid" type="int">
+			<generator class="increment" />
+		</id>
+		
+		<property name="cname" />
+		<property name="duration" type="int"/>
+		<property name="cost"  type="double"/>
+		<set name="student" table="std_cou">
+			<key column="mycid"/>
+			<many-to-many class="com.avishek.hibernate.Student" column="mysid"/>
+		</set>
+	</class>
+</hibernate-mapping>  

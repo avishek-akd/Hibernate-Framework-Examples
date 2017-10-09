@@ -1,0 +1,8 @@
+while running 3A use 
+	<property name="hbm2ddl.auto">create</property>
+	
+	
+	it automatically create the tables.......
+	
+while running 3B use 
+	<property name="hbm2ddl.auto">update</property>

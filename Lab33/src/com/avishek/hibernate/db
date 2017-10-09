@@ -1,0 +1,28 @@
+Create database Lab32;
+Use Lab32;
+
+
+create table customer(
+			cid int primary key auto_increment,
+			cname varchar(12),
+			email varchar(55),
+			city varchar(25),
+			cardBal double,
+			cardType varchar(10),
+			cardNo int,
+			status varchar(10)
+);   
+
+
+
+
+
+
+insert into customer values(101,'aa','aa@gmail.com','Bbsr',20222,'VISA',1234,'ACTIVE');
+insert into customer values(102,'bb','bb@gmail.com','Bbsr',30222,'VISA',5555,'ACTIVE');
+insert into customer values(103,'cc','cc@gmail.com','Bbsr',10222,'VISA',9999,'ACTIVE');
+insert into customer values(104,'dd','dd@gmail.com','Delhi',10222,'VISA',3333,'ACTIVE');
+insert into customer values(105,'ee','ee@gmail.com','Delhi',35222,'MASTER',4444,'ACTIVE');
+insert into customer values(106,'ff','ff@gmail.com','Hyd',45222,'MASTER',6666,'ACTIVE');
+insert into customer values(107,'gg','gg@gmail.com','Bbsr',25222,'VISA',7777,'INACTIVE');
+insert into customer values(108,'hh','hh@gmail.com','Hyd',22222,'VISA',8888,'ACTIVE');

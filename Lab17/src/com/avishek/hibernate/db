@@ -1,0 +1,8 @@
+while running 4A use 
+	<property name="hbm2ddl.auto">create</property>
+	
+	
+	it automatically create the tables.......
+	
+while running 4B use 
+	<property name="hbm2ddl.auto">update</property>

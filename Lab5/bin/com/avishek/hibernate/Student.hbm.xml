@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping package="com.avishek.hibernate">
+	<class name="Student" table="mystudent">
+	
+		<id name="sid" column="sid" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="sname" />
+		<property name="city" />
+		<property name="status"/>
+		<property name="totalfee" type="double"/>
+		
+		<joined-subclass name="CurrentStudent" table="cstudent">
+			<key column="sid"/>
+			<property name="feebal" type="double"/>
+			<property name="timing" />
+			<property name="branch"/>
+			
+			<joined-subclass  name="WeekdayStudent" table="wdstudent">
+				<key column="sid"/>
+				<property name="qualification"/>
+				<property name="percentage" />
+				<property name="yop" type="int"/>
+			</joined-subclass>
+			
+			<joined-subclass  name="WeekendStudent" table="westudent">
+				<key column="sid"/>
+				<property name="wcompany"/>
+				<property name="wemail" />
+				<property name="wctc" type="double"/>
+			</joined-subclass>
+		</joined-subclass>
+		
+		<joined-subclass name="OldStudent" table="ostudent">
+			<key column="sid"/>
+			<property name="ocompany" />
+			<property name="oemail" />
+			<property name="octc" type="double"/>
+		</joined-subclass>
+			
+	</class>
+</hibernate-mapping>  

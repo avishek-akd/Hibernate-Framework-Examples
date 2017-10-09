@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<ehcache>  
+<diskStore path="java.io.tmpdir"/>
+<defaultCache   
+maxElementsInMemory="100"   
+eternal="false"   
+timeToIdleSeconds="120"   
+timeToLiveSeconds="120" 
+overflowToDisk="true"/>  
+  
+<cache name="contact"   
+maxElementsInMemory="100"   
+eternal="false"   
+timeToIdleSeconds="3000"   
+timeToLiveSeconds="6000" 
+overflowToDisk="true"/>  
+</ehcache>  
